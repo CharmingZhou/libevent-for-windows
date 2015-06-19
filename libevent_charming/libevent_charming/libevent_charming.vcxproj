@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{29D2F959-9D3F-4AFD-991C-0E6E113B48D3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libevent_charming</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\src\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>NOMINMAX;WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\bufferevent-internal.h" />
+    <ClInclude Include="..\src\changelist-internal.h" />
+    <ClInclude Include="..\src\defer-internal.h" />
+    <ClInclude Include="..\src\evbuffer-internal.h" />
+    <ClInclude Include="..\src\evdns.h" />
+    <ClInclude Include="..\src\event-internal.h" />
+    <ClInclude Include="..\src\event.h" />
+    <ClInclude Include="..\src\evhttp.h" />
+    <ClInclude Include="..\src\evmap-internal.h" />
+    <ClInclude Include="..\src\evrpc-internal.h" />
+    <ClInclude Include="..\src\evrpc.h" />
+    <ClInclude Include="..\src\evsignal-internal.h" />
+    <ClInclude Include="..\src\evthread-internal.h" />
+    <ClInclude Include="..\src\evutil.h" />
+    <ClInclude Include="..\src\ht-internal.h" />
+    <ClInclude Include="..\src\http-internal.h" />
+    <ClInclude Include="..\src\include\event2\buffer.h" />
+    <ClInclude Include="..\src\include\event2\bufferevent.h" />
+    <ClInclude Include="..\src\include\event2\bufferevent_compat.h" />
+    <ClInclude Include="..\src\include\event2\bufferevent_ssl.h" />
+    <ClInclude Include="..\src\include\event2\bufferevent_struct.h" />
+    <ClInclude Include="..\src\include\event2\buffer_compat.h" />
+    <ClInclude Include="..\src\include\event2\dns.h" />
+    <ClInclude Include="..\src\include\event2\dns_compat.h" />
+    <ClInclude Include="..\src\include\event2\dns_struct.h" />
+    <ClInclude Include="..\src\include\event2\event-config.h" />
+    <ClInclude Include="..\src\include\event2\event.h" />
+    <ClInclude Include="..\src\include\event2\event_compat.h" />
+    <ClInclude Include="..\src\include\event2\event_struct.h" />
+    <ClInclude Include="..\src\include\event2\http.h" />
+    <ClInclude Include="..\src\include\event2\http_compat.h" />
+    <ClInclude Include="..\src\include\event2\http_struct.h" />
+    <ClInclude Include="..\src\include\event2\keyvalq_struct.h" />
+    <ClInclude Include="..\src\include\event2\listener.h" />
+    <ClInclude Include="..\src\include\event2\rpc.h" />
+    <ClInclude Include="..\src\include\event2\rpc_compat.h" />
+    <ClInclude Include="..\src\include\event2\rpc_struct.h" />
+    <ClInclude Include="..\src\include\event2\tag.h" />
+    <ClInclude Include="..\src\include\event2\tag_compat.h" />
+    <ClInclude Include="..\src\include\event2\thread.h" />
+    <ClInclude Include="..\src\include\event2\util.h" />
+    <ClInclude Include="..\src\iocp-internal.h" />
+    <ClInclude Include="..\src\ipv6-internal.h" />
+    <ClInclude Include="..\src\log-internal.h" />
+    <ClInclude Include="..\src\minheap-internal.h" />
+    <ClInclude Include="..\src\mm-internal.h" />
+    <ClInclude Include="..\src\ratelim-internal.h" />
+    <ClInclude Include="..\src\strlcpy-internal.h" />
+    <ClInclude Include="..\src\util-internal.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="test_libevent.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\buffer.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\bufferevent.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\bufferevent_async.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\bufferevent_filter.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\bufferevent_pair.c" />
+    <ClCompile Include="..\src\bufferevent_ratelim.c" />
+    <ClCompile Include="..\src\bufferevent_sock.c" />
+    <ClCompile Include="..\src\buffer_iocp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\evdns.c" />
+    <ClCompile Include="..\src\event.c" />
+    <ClCompile Include="..\src\event_iocp.c" />
+    <ClCompile Include="..\src\event_tagging.c" />
+    <ClCompile Include="..\src\evmap.c" />
+    <ClCompile Include="..\src\evrpc.c" />
+    <ClCompile Include="..\src\evthread.c" />
+    <ClCompile Include="..\src\evthread_win32.c" />
+    <ClCompile Include="..\src\evutil.c" />
+    <ClCompile Include="..\src\evutil_rand.c" />
+    <ClCompile Include="..\src\http.c" />
+    <ClCompile Include="..\src\listener.c" />
+    <ClCompile Include="..\src\log.c" />
+    <ClCompile Include="..\src\signal.c" />
+    <ClCompile Include="..\src\strlcpy.c" />
+    <ClCompile Include="..\src\win32select.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libevent_charming.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="sample_eof.cpp" />
+    <ClCompile Include="sample_event.cpp" />
+    <ClCompile Include="sample_helloworld.cpp" />
+    <ClCompile Include="sample_signal.cpp" />
+    <ClCompile Include="sample_time.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
